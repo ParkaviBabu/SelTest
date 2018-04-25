@@ -17,7 +17,7 @@ public class NewTest2 {
 	@Test
 	public void launchChrome()
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\Parkavi\SelTest\src\test\resources\chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.get("http://newtours.demoaut.com/");
 		driver.manage().window().maximize();
