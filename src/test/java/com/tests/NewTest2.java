@@ -19,8 +19,15 @@ public class NewTest2 {
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\Parkavi\\chromedriver.exe");
 		driver=new ChromeDriver();
-		driver.get("http://github.com/");
+		driver.get("http://newtours.demoaut.com/");
 		driver.manage().window().maximize();
+		
+		driver.findElement(By.name("userName")).sendKeys("remi");
+		driver.findElement(By.name("password")).sendKeys("remi");
+		driver.findElement(By.name("login")).click();
+		String title=driver.getTitle();
+		Assert.assertEquals(title, "Find a Flight: Mercury Tours:");
+	
 		
 	}
 
